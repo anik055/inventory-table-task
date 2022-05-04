@@ -1,12 +1,9 @@
 import React from "react";
-import PrimarySearchAppBar from "./Search";
 import DropdownSelect from "./Select";
 import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
 import Avatar from "@mui/material/Avatar";
 import avater from "../images/profile.jpg";
-import Dropdown from "./Dropdown";
 import SearchBar from "./SearchBar";
-import NewDrop from "./NewDrop";
 
 const notificationIconStyle = {
   width: "17.54px",
@@ -24,13 +21,16 @@ const dropdownStyle = {
   paddingLeft: "4px",
 };
 
+const coffeeHouse = [ 'KFC', 'CFC', 'BFC'];
+const person = ['Watson', 'Alison', 'Tomas'];
+
+
 const Header = () => {
   return (
     <div style={{}} className="header">
       <div className="rowView">
         <div className="starbucks">
-          <DropdownSelect name="Starbucks" />
-
+          <DropdownSelect name="Starbucks" options={coffeeHouse} />
         </div>
         <div className="d-none d-md-block">
           <SearchBar />
@@ -44,7 +44,7 @@ const Header = () => {
           <Avatar sx={avaterStyle} src={avater} />
         </div>
         <div style={dropdownStyle}>
-          <DropdownSelect name="John Doe" />
+          <DropdownSelect name="John Doe" options={person} />
         </div>
       </div>
     </div>

@@ -1,6 +1,4 @@
 import React from "react";
-import Dropdown from "./Dropdown";
-
 import SearchBar from "./SearchBar";
 import CircleIcon from "@mui/icons-material/Circle";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
@@ -79,19 +77,29 @@ const tableData = [
   },
 ];
 
-const dateStyle = {width: '80%', }
+const dateStyle = { width: '80%' }
+
+const arrowUpStyle = {
+                      position: "absolute",
+                      width: "10px",
+                      height: "11.23px",
+}
+
+const circleIconStyle =  {
+                          height: "8px",
+                          width: "8px",
+                          marginLeft: "8px",
+                        }
 
 const Table = () => {
   return (
-    <div
-
-    >
+    <div>
       <div className="title">Inventory</div>
       <hr />
       <div className="inventory-table">
         <div
           className="d-flex d-md-block justify-content-center"
-          style={{ padding: "12px 16px 12px 16px" }}
+          style={{ padding: "12px 16px" }}
         >
           <SearchBar />
         </div>
@@ -104,59 +112,42 @@ const Table = () => {
               >
                 <input className=" checkbox" type="checkbox" />
               </th>
-              <th style={dateStyle} className="d-none d-md-inline-block text-end">
+              <th
+                style={dateStyle}
+                className="d-none d-md-inline-block text-end"
+              >
                 Date Updated{" "}
                 <ArrowDownwardIcon sx={{ width: "10px", height: "11.23px" }} />{" "}
               </th>
               <th className="title-data" style={{ position: "relative" }}>
                 Title{" "}
-                <ArrowUpwardIcon
-                  sx={{
-                    position: "relative",
-                    width: "10px",
-                    height: "11.23px",
-                    top: "-4px",
-                  }}
-                />
-                <ArrowDownwardIcon
-                  sx={{
-                    position: "absolute",
-                    width: "10px",
-                    height: "11.23px",
-                    top: "17.5px",
-                    left: "46.7px",
-                  }}
-                />{" "}
+                <span className="px-2">
+                  <ArrowUpwardIcon sx={arrowUpStyle} />
+                  <ArrowDownwardIcon
+                    sx={{
+                      ...arrowUpStyle,
+                      top: "17px",
+                    }}
+                  />{" "}
+                </span>
               </th>
               <th className="d-none d-xl-block text-start">Details</th>
               <th>Status</th>
               <th className="text-end">Quantity</th>
               <th className="d-none d-lg-block text-end">Unit Price</th>
-              <th
-                style={{
-                  position: "relative",
-                  textAlign: "right",
-                  paddingRight: "16px",
-                }}
+              <th className="amount-head"
+
               >
                 Amount{" "}
-                <ArrowUpwardIcon
-                  sx={{
-                    position: "relative",
-                    width: "10px",
-                    height: "11.23px",
-                    top: "-4px",
-                  }}
-                />
-                <ArrowDownwardIcon
-                  sx={{
-                    position: "absolute",
-                    width: "10px",
-                    height: "11.23px",
-                    top: "17px",
-                    right: "16px",
-                  }}
-                />
+                <span className="px-2">
+                  <ArrowUpwardIcon sx={arrowUpStyle} />
+                  <ArrowDownwardIcon
+                    sx={{
+                      ...arrowUpStyle,
+                      top: "17px",
+                    }}
+                  />
+                </span>
               </th>
             </tr>
           </thead>
@@ -185,13 +176,7 @@ const Table = () => {
                         {rowData.status}
                       </span>
                       <CircleIcon
-                        sx={{
-
-                          height: "8px",
-                          width: "8px",
-                          marginLeft: "8px",
-                          color: `${rowData.color}`,
-                        }}
+                        sx={{ ...circleIconStyle, color: `${rowData.color}` }}
                       />{" "}
                     </span>
                   </td>
