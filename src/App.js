@@ -1,11 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
-import Inventory from './component/Inventory';
+import MainSection from './component/MainSection';
+import Header from './component/Header';
 
 function App() {
   return (
     <div className="App">
-      <Inventory/>
+      <Header />
+      <MainSection />
     </div>
   );
 }

@@ -1,8 +1,11 @@
 import React from 'react'
+import Header from './Header'
 
 const Inventory = () => {
   return (
-    <div>Inventory</div>
+      <div>
+          <Header/>
+    </div>
   )
 }
 
