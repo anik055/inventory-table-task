@@ -16,7 +16,7 @@ const notificationIconStyle = {
 const avaterStyle = { width: "32px", height: "32px", marginTop: "16px" };
 
 const dropdownStyle = {
-  marginTop: "16px",
+  // marginTop: "16px",
   marginRight: "19px",
   paddingLeft: "4px",
 };
@@ -27,7 +27,7 @@ const person = ['Watson', 'Alison', 'Tomas'];
 
 const Header = () => {
   return (
-    <div style={{}} className="header">
+    <div className="header">
       <div className="rowView">
         <div className="starbucks">
           <DropdownSelect name="Starbucks" options={coffeeHouse} />
@@ -43,7 +43,10 @@ const Header = () => {
         <div>
           <Avatar sx={avaterStyle} src={avater} />
         </div>
-        <div style={dropdownStyle}>
+        <div
+          className="d-flex justify-content-center align-items-center"
+          style={dropdownStyle}
+        >
           <DropdownSelect name="John Doe" options={person} />
         </div>
       </div>
