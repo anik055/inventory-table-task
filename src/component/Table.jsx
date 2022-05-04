@@ -10,7 +10,7 @@ const tableData = [
   {
     date: "11 nov 2019",
     title: "Hammer",
-    details: "this is a hammer to work with",
+    details: "This is a hammer to work with",
     status: "Alright",
     quantity: "100",
     quantity1: "200",
@@ -21,7 +21,7 @@ const tableData = [
   {
     date: "11 nov 2019",
     title: "Hammer",
-    details: "this is a hammer to work with",
+    details: "This is a hammer to work with",
     status: "Out of Stock",
     quantity: "200",
     quantity1: "350",
@@ -32,7 +32,7 @@ const tableData = [
   {
     date: "11 nov 2019",
     title: "Hammer",
-    details: "this is a hammer to work with",
+    details: "This is a hammer to work with",
     status: "Out of Stock",
     quantity: "200",
     quantity1: "250",
@@ -43,7 +43,7 @@ const tableData = [
   {
     date: "11 nov 2019",
     title: "Hammer",
-    details: "this is a hammer to work with",
+    details: "This is a hammer to work with",
     status: "Alright",
     quantity: "2",
     quantity1: "400",
@@ -56,7 +56,7 @@ const tableData = [
   {
     date: "11 nov 2019",
     title: "Hammer",
-    details: "this is a hammer to work with",
+    details: "This is a hammer to work with",
     status: "In Progress",
     quantity: "20",
   quantity1: "300",
@@ -67,7 +67,7 @@ const tableData = [
   {
     date: "11 nov 2019",
     title: "Hammer",
-    details: "this is a hammer to work with",
+    details: "This is a hammer to work with",
     status: "In Progress",
     quantity: "200",
     quantity1: "300",
